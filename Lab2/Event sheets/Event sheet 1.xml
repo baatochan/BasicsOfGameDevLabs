@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="493291694377876">
+            <conditions>
+                <condition id="0" name="On click" sid="141772286786866" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="4" name="Apply impulse towards position" sid="261519874009924" type="Sprite3">
+                    <param id="0" name="Impulse">(sqrt((Sprite3.X-Mouse.X)^2+(Sprite3.Y-Mouse.Y)^2))/10</param>
+                    <param id="1" name="X">Mouse.X</param>
+                    <param id="2" name="Y">Mouse.Y</param>
+                    <param id="3" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="897189809815750">
+            <conditions>
+                <condition id="0" name="On click" sid="672366928770848" type="Mouse">
+                    <param id="0" name="Mouse button">2</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="15" name="Set velocity" sid="634891093882992" type="Sprite3">
+                    <param id="0" name="X component">0</param>
+                    <param id="1" name="Y component">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="485964619623658" type="Sprite3">
+                    <param id="0" name="X">100</param>
+                    <param id="1" name="Y">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="724094525140968">
+            <conditions>
+                <condition id="-4" name="Is outside layout" sid="940857821555940" type="Sprite2" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="177331018827245" type="Sprite2" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
