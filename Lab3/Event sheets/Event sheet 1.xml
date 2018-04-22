@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="252599446837430">
+            <conditions>
+                <condition id="2" name="Key is down" sid="959374718545219" type="Keyboard">
+                    <param id="0" name="Key">68</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="698760136946576" type="Dariusz">
+                    <param id="0" name="Instance variable">gameOn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="741323615541726" type="Dariusz">
+                    <param id="0" name="X">Self.X+Self.speed*dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="544856769385600">
+            <conditions>
+                <condition id="2" name="Key is down" sid="624908085362515" type="Keyboard">
+                    <param id="0" name="Key">65</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="784003498007263" type="Dariusz">
+                    <param id="0" name="Instance variable">gameOn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="766453975555022" type="Dariusz">
+                    <param id="0" name="X">Self.X-Self.speed*dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="304810410750503">
+            <conditions>
+                <condition id="2" name="Key is down" sid="826824075751151" type="Keyboard">
+                    <param id="0" name="Key">83</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="867130059845852" type="Dariusz">
+                    <param id="0" name="Instance variable">gameOn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="649003926970831" type="Dariusz">
+                    <param id="0" name="Y">Self.Y+Self.speed*dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="728940274082289">
+            <conditions>
+                <condition id="2" name="Key is down" sid="874660897327847" type="Keyboard">
+                    <param id="0" name="Key">87</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="807008096258927" type="Dariusz">
+                    <param id="0" name="Instance variable">gameOn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="303573584736082" type="Dariusz">
+                    <param id="0" name="Y">Self.Y-Self.speed*dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="225416847086507">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="649890426906355" type="System" />
+                <condition id="-8" name="Is boolean instance variable set" sid="924487414737474" type="Dariusz">
+                    <param id="0" name="Instance variable">gameOn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="136900011062203" type="Dariusz">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="475467153688330" type="Ivan">
+                    <param id="0" name="X">Dariusz.X</param>
+                    <param id="1" name="Y">Dariusz.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="971517807755408">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="992985528588372" type="System" />
+                <condition id="-8" name="Is boolean instance variable set" sid="760444217250247" type="Dariusz">
+                    <param id="0" name="Instance variable">gameOn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="968336574959055" type="myBullet" />
+                <action id="-9" name="Destroy" sid="129755533245385" type="Ivan" />
+                <action id="-9" name="Destroy" sid="811820042511467" type="Explotion" />
+                <action id="-3" name="Create object" sid="711980779564957" type="System">
+                    <param id="0" name="Object to create">Ivan</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">random(LayoutWidth-20)+20</param>
+                    <param id="3" name="Y">random(LayoutHeight-20)+20</param>
+                </action>
+                <action id="-9" name="Destroy" sid="195258585327672" type="ivanBullet" />
+                <action behavior="Timer" id="0" name="Start timer" sid="793893121940494" type="Ivan">
+                    <param id="0" name="Duration">5</param>
+                    <param id="1" name="Type">1</param>
+                    <param id="2" name="Tag">&quot;timer1&quot;</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="201286018242939" type="Ivan">
+                    <param id="0" name="Duration">1.0</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;timer2&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="408017317271135" type="fastExplotion" />
+                <action id="-9" name="Destroy" sid="341024781194770" type="GameOver" />
+            </actions>
+        </event-block>
+        <event-block sid="810938570776045">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="364809983431628" type="System">
+                    <param id="0" name="Interval (seconds)">3</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="870818841127373" type="Dariusz">
+                    <param id="0" name="Instance variable">gameOn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="940369270287464" type="System">
+                    <param id="0" name="Object to create">Ivan</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">random(LayoutWidth-20)+20</param>
+                    <param id="3" name="Y">random(LayoutHeight-20)+20</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="212120962578889" type="Ivan">
+                    <param id="0" name="Duration">6</param>
+                    <param id="1" name="Type">1</param>
+                    <param id="2" name="Tag">&quot;timer1&quot;</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="110441255562741" type="Ivan">
+                    <param id="0" name="Duration">1.0</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;timer2&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="793248850307301">
+            <conditions>
+                <condition id="0" name="On click" sid="814143266274808" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="377932014237693" type="Dariusz">
+                    <param id="0" name="Instance variable">gameOn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="555328434139513" type="Dariusz">
+                    <param id="0" name="Object">myBullet</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="574472960051606">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="708869562865589" type="myBullet">
+                    <param id="0" name="Object">Ivan</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="409958414831362" type="Dariusz">
+                    <param id="0" name="Instance variable">gameOn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="421864124358948" type="Ivan">
+                    <param id="0" name="Object">Explotion</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="331101146724687" type="Ivan" />
+                <action id="-9" name="Destroy" sid="355116549811828" type="myBullet" />
+            </actions>
+        </event-block>
+        <event-block sid="504843218166841">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="601137828183850" type="System" />
+                <condition id="-8" name="Is boolean instance variable set" sid="122544485407307" type="Dariusz">
+                    <param id="0" name="Instance variable">gameOn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-17" name="Move forward" sid="729132523634957" type="Ivan">
+                    <param id="0" name="Distance">Self.speed*dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="546886026034236">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="745546702080045" type="Ivan">
+                    <param id="0" name="Tag">&quot;timer1&quot;</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="616121487410062" type="Dariusz">
+                    <param id="0" name="Instance variable">gameOn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="282648448194474" type="Ivan">
+                    <param id="0" name="Object">ivanBullet</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="633097748708113">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="552739504820435" type="Ivan">
+                    <param id="0" name="Tag">&quot;timer2&quot;</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="206730318653828" type="Dariusz">
+                    <param id="0" name="Instance variable">gameOn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="876160312302878" type="Ivan">
+                    <param id="0" name="Object">ivanBullet</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="328709868773306">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="639434403961994" type="ivanBullet">
+                    <param id="0" name="Object">Dariusz</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="152181966284502" type="Dariusz">
+                    <param id="0" name="Instance variable">gameOn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="531101096243103" type="Dariusz">
+                    <param id="0" name="Object">fastExplotion</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="501809517063413" type="Dariusz">
+                    <param id="0" name="Instance variable">life</param>
+                    <param id="1" name="Value">Self.life-10</param>
+                </action>
+                <action id="-9" name="Destroy" sid="992764566350625" type="ivanBullet" />
+                <action id="0" name="Set text" sid="388421976600425" type="HP">
+                    <param id="0" name="Text">&quot;HP: &quot; &amp; Dariusz.life</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="320647446945518">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="764913915267781" type="Dariusz">
+                    <param id="0" name="Instance variable">life</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="718673418307654" type="Dariusz">
+                    <param id="0" name="Instance variable">gameOn</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="549233936093814" type="System">
+                    <param id="0" name="Object to create">GameOver</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">378</param>
+                    <param id="3" name="Y">235</param>
+                </action>
+                <action id="-16" name="Wait" sid="141517117565707" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="287710066975628" type="System" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
